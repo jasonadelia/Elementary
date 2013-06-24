@@ -1,6 +1,6 @@
 # Elementary
  
-The goal of this script is to provide a way of achieving element queries for use in responsive web design. 98% or more of the credit for this code goes to [Respond JS](https://github.com/scottjehl/Respond). Just as Respond JS was meant to add support for CSS3 Media Queries in browsers that don't support them, Elementary adds support for element queries in browsers that don't support them, aka all browsers. Respond JS provided all of the heavy lifting of pulling the CSS via AJAX and parsing the stylesheets. With Elementary we are searching for a different pattern to identify elements query blocks instead of media query blocks and altered the logic slightly to determine when to apply those blocks to the page.
+The goal of this script is to provide a way of achieving element queries for use in responsive web design. 98% or more of the credit for this code goes to [Respond JS](https://github.com/scottjehl/Respond). Just as Respond JS was meant to add support for CSS3 Media Queries in browsers that don't support them, Elementary adds support for element queries in browsers that don't support them, aka all browsers. Respond JS provided all of the heavy lifting of pulling the CSS via AJAX and parsing the stylesheets. With Elementary we are searching for a different pattern to identify element query blocks instead of media query blocks and altered the logic slightly to determine when to apply those blocks to the page.
 
 How does it work?
 ======
