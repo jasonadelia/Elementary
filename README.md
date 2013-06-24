@@ -16,7 +16,7 @@ An element query is a figment of my imagination. While [Respond JS](https://gith
 Usage Instructions
 ======
 
-1. Craft your CSS with min/max-width element queries to adapt your layout from mobile (first) all the way up to desktop
+- Craft your CSS with min/max-width element queries to adapt your layout from mobile (first) all the way up to desktop
 
 
 <pre>
@@ -25,7 +25,40 @@ Usage Instructions
     }
 </pre>
 
-2. Reference the elementary.min.js script after all of your CSS (the earlier it runs, the greater chance users will not see a flash of un-media'd content)
+- Reference the elementary.min.js script after all of your CSS (the earlier it runs, the greater chance users will not see a flash of un-media'd content)
+
+The selector
+======
+The script uses the selector specified to find all matching elements in the DOM and then tests each element to see if it meets the query that is specified. In the example above, the script will find all elements with a class of "testimonial" and test to see if each element is at least 480px wide. If it is, the script will dump the CSS block onto the page. 
+
+It is very possible that there are multiple elements on the page that match the selector and that each of those elements could have a different size. Just because testimonial A is greater than 480px, doesn't mean that testimonial B is. To prevent this from happening, the script will replace every instance of the selector inside of the element query block with a unique element query class and also apply that class to the element in the DOM. For example:
+
+<pre>
+    ... html file ...
+    <div class="testimonial">...</div>
+
+    ... css file ...
+    @element[.testimonial] screen and (min-width: 8em ){
+        .testimonial{
+            font-size:1em;
+        }
+        .testimonial .avatar {
+            width: 3.5em;
+        }
+    }
+</pre>
+
+If the testimonial is wider than 8em, the class "__eq1" would be added to the div and the following CSS would be appended to the page
+
+<pre>
+    .__eq1{
+        font-size:1em;
+    }
+    .__eq1 .avatar {
+        width: 3.5em;
+    }
+</pre>
+
 
 Demos
 ======
