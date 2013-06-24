@@ -31,7 +31,7 @@ The selector
 ======
 The script uses the selector specified to find all matching elements in the DOM and then tests each element to see if it meets the query that is specified. In the example above, the script will find all elements with a class of "testimonial" and test to see if each element is at least 480px wide. If it is, the script will dump the CSS block onto the page. 
 
-It is very possible that there are multiple elements on the page that match the selector and that each of those elements could have a different size. Just because testimonial A is greater than 480px, doesn't mean that testimonial B is. To prevent this from happening, the script will replace every instance of the selector inside of the element query block with a unique element query class and also apply that class to the element in the DOM. For example:
+It is very possible that there are multiple elements on the page that match the selector and that each of those elements could have a different size. Just because testimonial A is greater than 480px, doesn't mean that testimonial B is. We need to be able to assign styles only to the element that meet the criteria. To do this, the script will replace every instance of the selector inside of the element query block with a unique element query class and also apply that class to the element in the DOM. For example:
 
 <pre>
     ... html file ...
