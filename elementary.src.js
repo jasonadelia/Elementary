@@ -23,7 +23,7 @@
 		docElem = doc.documentElement,
 		mediastyles = [],
 		elements = [],
-		cqIndex = 0,
+		eqIndex = 0,
 		rules = [],
 		appendedEls = [],
 		parsedSheets = {},
@@ -206,7 +206,7 @@
 				lastCall = now;
 			}
 
-			cqIndex=0;
+			eqIndex=0;
 			for( var i in mediastyles ){
 				if( mediastyles.hasOwnProperty( i ) ){
 					var thisstyle = mediastyles[ i ],
@@ -216,9 +216,9 @@
 						maxnull = max === null,
 						em = "em",
 						elements = doc.querySelectorAll(thisstyle.selector),
-						cqid = "__cq" + cqIndex,
+						eqid = "__eq" + eqIndex,
 						hasmatch = false;
-						cqIndex++;
+						eqIndex++;
 
 					if( !!min ){
 						min = parseFloat( min ) * ( min.indexOf( em ) > -1 ? ( eminpx || getEmValue() ) : 1 );
@@ -238,7 +238,7 @@
 
 						// if there's no media query at all (the () part), or min or max is not null, and if either is present, they're true
 						if( !thisstyle.hasquery || ( !minnull || !maxnull ) && ( minnull || elementWidth >= min ) && ( maxnull || elementWidth <= max ) ){
-							addClass(elements[ l ], cqid);
+							addClass(elements[ l ], eqid);
 							hasmatch=true;
 						}
 					}
@@ -247,7 +247,7 @@
 						if( !styleBlocks[ thisstyle.media ] ){
 							styleBlocks[ thisstyle.media ] = [];
 						}
-						styleBlocks[ thisstyle.media ].push( rules[ thisstyle.rules ].replace(new RegExp(thisstyle.selector,"g"), "."+cqid) );
+						styleBlocks[ thisstyle.media ].push( rules[ thisstyle.rules ].replace(new RegExp(thisstyle.selector,"g"), "."+eqid) );
 					}
 				}
 			}
