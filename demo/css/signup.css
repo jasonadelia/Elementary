@@ -193,7 +193,7 @@ content: "\201D";
 	transition: all 0.4s;
 }
 */
-@component[.testimonial] screen and (min-width: 8em ){
+@element[.testimonial] screen and (min-width: 8em ){
 	.testimonial{
 		font-size:1em;
 	}
@@ -202,7 +202,7 @@ content: "\201D";
 	}
 }
 
-@component[.testimonial] screen and (min-width: 15em ){
+@element[.testimonial] screen and (min-width: 15em ){
 	.testimonial .person .title {
 		display:block;
 	}

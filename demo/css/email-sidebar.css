@@ -35,7 +35,7 @@
   display: block;
 }
 
-@component[.sidebar] screen and (min-width: 241px){
+@element[.sidebar] screen and (min-width: 241px){
   .sidebar ul li a:after {
     content: " (" attr(data-email) ")";
     font-size: 11px;
@@ -44,7 +44,7 @@
   }
 }
 
-@component[.sidebar] screen and (max-width: 240px) and (min-width: 170px){
+@element[.sidebar] screen and (max-width: 240px) and (min-width: 170px){
   .sidebar ul li a:before {
     content: "Email: ";
     font-style: italic;
@@ -52,7 +52,7 @@
   }
 }
 
-@component[.sidebar] screen and (max-width: 169px) and (min-width: 125px), [.sidebar] screen and (min-width: 280px) {
+@element[.sidebar] screen and (max-width: 169px) and (min-width: 125px), [.sidebar] screen and (min-width: 280px) {
   .sidebar ul li a {
     padding-left: 21px;
     background: url(http://css-tricks.com/examples/MediaQueriesSidebar/images/email.png) left center no-repeat;

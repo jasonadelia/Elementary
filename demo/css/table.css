@@ -184,7 +184,7 @@ content: "\201D";
 */
 
  .opt{display:none;}
-@component[.data-table] screen and (min-width: 45em ){
+@element[.data-table] screen and (min-width: 45em ){
 	.data-table .opt{
 		display:table-cell;
 	}
