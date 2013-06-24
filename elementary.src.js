@@ -1,5 +1,5 @@
 /*! Respond.js v1.1.0: min/max-width media query polyfill. (c) Scott Jehl. MIT/GPLv2 Lic. j.mp/respondjs  */
-(function( win ){
+(function(win) {
 
 	"use strict";
 
@@ -91,7 +91,7 @@
 
 		//find media blocks in css text, convert to style blocks
 		translate = function( styles, href, media ){
-			var qs = styles.match(  /@component[^\{]+\{([^\{\}]*\{[^\}\{]*\})+/gi ),
+			var qs = styles.match(  /@element[^\{]+\{([^\{\}]*\{[^\}\{]*\})+/gi ),
 				ql = qs && qs.length || 0;
 
 			//try to get CSS path
@@ -123,7 +123,7 @@
 				}
 				//parse for styles
 				else{
-					fullq = qs[ i ].match( /@component *([^\{]+)\{([\S\s]+?)$/ ) && RegExp.$1;
+					fullq = qs[ i ].match( /@element *([^\{]+)\{([\S\s]+?)$/ ) && RegExp.$1;
 					rules.push( RegExp.$2 && repUrls( RegExp.$2 ) );
 				}
 
