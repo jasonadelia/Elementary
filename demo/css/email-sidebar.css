@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#fluid-wrap {
+  width: 70%; 
+  margin: 60px auto;
+  padding: 20px;
+  background: #eee;
+  overflow: hidden;
+}
+
+#fluid-wrap2 {
+  width: 45%; 
+  margin: 60px auto;
+  padding: 20px;
+  background: #aaa;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 35%;
+  float: left;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li a {
+  color: #900;
+  text-decoration: none;
+  padding: 3px 0; 
+  display: block;
+}
+
+@element[.sidebar] screen and (min-width: 241px){
+  .sidebar ul li a:after {
+    content: " (" attr(data-email) ")";
+    font-size: 11px;
+    font-style: italic;
+    color: #666;
+  }
+}
+
+@element[.sidebar] screen and (max-width: 240px) and (min-width: 170px){
+  .sidebar ul li a:before {
+    content: "Email: ";
+    font-style: italic;
+    color: #666;
+  }
+}
+
+@element[.sidebar] screen and (max-width: 169px) and (min-width: 125px), [.sidebar] screen and (min-width: 280px) {
+  .sidebar ul li a {
+    padding-left: 21px;
+    background: url(http://css-tricks.com/examples/MediaQueriesSidebar/images/email.png) left center no-repeat;
+  }
+}
+
+#main-content {
+  width: 65%;
+  float: right;
+}

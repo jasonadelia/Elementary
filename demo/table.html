@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Elementary JS Test Page</title>
+		<link href="css/normalize.css" rel="stylesheet"/>
+		<link href="css/table.css" rel="stylesheet"/>
+		<script src="../elementary.src.js"></script>
+	</head> 
+	<body>
+		<div><a href="#" id="filterToggle" data-state="hidden">Filter Toggle</a></div>
+		<div id="table">
+			<section class="filter">
+				<h1>Filters</h1>
+			</section>
+			<section class="data">
+				<table class="data-table">
+					<thead>
+						<tr>
+							<th>Date</th>
+							<th>Title</th>
+							<th class="opt">Type</th>
+							<th class="opt">Category</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>4/3/2008</td>
+							<td>Dreamcatcher odd future nostrud commodo</td>
+							<td class="opt">Magna</td>
+							<td class="opt">mixtape</td>
+						</tr>
+						<tr>
+							<td>5/17/2013</td>
+							<td>YOLO synth occupy pug qui flannel cillum mollit sartorial</td>
+							<td class="opt">Portland</td>
+							<td class="opt">8-bit</td>
+						</tr>
+						<tr>
+							<td>6/6/2011</td>
+							<td>Selvage single-origin coffee fap ennui brooklyn gastropub. Aliqua consequat authentic, neutra keytar ea gastropub put a bird on it mumblecore thundercats vice squid</td>
+							<td class="opt">Magna</td>
+							<td class="opt">vinyl</td>
+						</tr>
+						<tr>
+							<td>4/3/2008</td>
+							<td>Dreamcatcher odd future nostrud commodo</td>
+							<td class="opt">Magna</td>
+							<td class="opt">mixtape</td>
+						</tr>
+						<tr>
+							<td>5/17/2013</td>
+							<td>YOLO synth occupy pug qui flannel cillum mollit sartorial</td>
+							<td class="opt">Portland</td>
+							<td class="opt">8-bit</td>
+						</tr>
+						<tr>
+							<td>6/6/2011</td>
+							<td>Selvage single-origin coffee fap ennui brooklyn gastropub. Aliqua consequat authentic, neutra keytar ea gastropub put a bird on it mumblecore thundercats vice squid</td>
+							<td class="opt">Magna</td>
+							<td class="opt">vinyl</td>
+						</tr>
+						<tr>
+							<td>4/3/2008</td>
+							<td>Dreamcatcher odd future nostrud commodo</td>
+							<td class="opt">Magna</td>
+							<td class="opt">mixtape</td>
+						</tr>
+						<tr>
+							<td>5/17/2013</td>
+							<td>YOLO synth occupy pug qui flannel cillum mollit sartorial</td>
+							<td class="opt">Portland</td>
+							<td class="opt">8-bit</td>
+						</tr>
+						<tr>
+							<td>6/6/2011</td>
+							<td>Selvage single-origin coffee fap ennui brooklyn gastropub. Aliqua consequat authentic, neutra keytar ea gastropub put a bird on it mumblecore thundercats vice squid</td>
+							<td class="opt">Magna</td>
+							<td class="opt">vinyl</td>
+						</tr>
+						<tr>
+							<td>4/3/2008</td>
+							<td>Dreamcatcher odd future nostrud commodo</td>
+							<td class="opt">Magna</td>
+							<td class="opt">mixtape</td>
+						</tr>
+						<tr>
+							<td>5/17/2013</td>
+							<td>YOLO synth occupy pug qui flannel cillum mollit sartorial</td>
+							<td class="opt">Portland</td>
+							<td class="opt">8-bit</td>
+						</tr>
+						<tr>
+							<td>6/6/2011</td>
+							<td>Selvage single-origin coffee fap ennui brooklyn gastropub. Aliqua consequat authentic, neutra keytar ea gastropub put a bird on it mumblecore thundercats vice squid</td>
+							<td class="opt">Magna</td>
+							<td class="opt">vinyl</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</div>
+		<script>
+			document.getElementById("filterToggle").onclick = function(){
+				var toggle = document.getElementById("filterToggle");
+				var state = toggle.getAttribute('data-state');
+				if(state == "hidden"){
+					document.getElementById("table").className = 'filters-shown';
+					toggle.setAttribute('data-state', 'shown');
+				}
+				else{
+					document.getElementById("table").className = '';
+					toggle.setAttribute('data-state', 'hidden');
+				}
+				elementary.run();
+				return false;
+			};
+		</script>
+	</body>
+</html>

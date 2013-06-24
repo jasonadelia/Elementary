@@ -1,0 +1,224 @@
+/*
+This is just a test file for making sure the script is working properly.
+If it is, the media queries below will change the body's background color depending on the browser width.
+For a realistic use case for media queries: read up on Responsive Web Design: 
+http://www.alistapart.com/articles/responsive-web-design/
+*/
+html, body {
+height: 100%;
+}
+
+html{font: 20px sans-serif;}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+blockquote{margin: 0;}
+a {
+	color: #333;
+}
+
+/* hide the attribute-test element. test2.css will show it */
+#attribute-test {
+	display: none;
+}
+
+#signup .form, #signup .testimonials {
+	width:100%;
+	vertical-align: top;
+}
+
+#signup .form h1 {
+	text-align: center;
+	font-size: 2em;
+	color: #D6D6D6;
+	margin:0.5em 0;
+}
+
+@media only screen and (min-width: 24em){
+	#signup .form {
+		display: table-cell;
+		height: 100%;
+		width: 60%;
+	}
+	#signup .testimonials {
+		display: table-cell;
+		height: 100%;
+		width: 40%;
+	}
+
+	#signup .form h1 {
+		margin:2em 0;
+	}
+}
+
+fieldset{border:0; margin:0; padding:0.35em 0 0.75em;}
+#signup {
+	height: 100%;
+	display: table;
+	margin-bottom:2em;
+}
+
+
+
+#signup .form form {
+	max-width: 20em;
+	margin: 0 auto;
+	padding-right: 1.5em;
+	padding-left: 3em;
+}
+#signup .form input{
+	width: 100%;
+	padding: 0.65em 0.9em 0.85em;
+	font-weight: 500;
+	border: none;
+	background-color: #F0F8F2;
+}
+
+.button {
+	position: relative;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	white-space: nowrap;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	color: inherit;
+	font: inherit;
+	line-height: normal;
+	-webkit-appearance: none;
+}
+
+.button {
+	text-transform: lowercase;
+	font-weight: 500;
+	padding: 0.65em 1.4em 0.85em;
+	font-weight: 600;
+	color: #fff;
+	background-color: #76AAC7;
+	border-radius: 3px;
+	-webkit-transition: background-color 0.2s;
+	-moz-transition: background-color 0.2s;
+	-o-transition: background-color 0.2s;
+	transition: background-color 0.2s;
+}
+
+.button:hover, .button:focus {
+	background-color: #5B95B6;
+}
+
+#signup .testimonials {
+	background-color: #F0F8F2;
+	padding:1.5em 0;
+}
+
+#signup .testimonials li {
+	padding-left: 3em;
+	padding-right: 3em;
+}
+
+#signup .testimonials li+li {
+	margin-top: 2.5em;
+}
+
+ol, ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+.testimonial blockquote::before {
+content: "\201C";
+}
+
+.testimonial blockquote::after {
+content: "\201D";
+}
+
+.person {
+	display: table;
+}
+
+.person .avatar, .person .bio {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.testimonial {
+	text-align: center;
+	font-size: 0.7em;
+}
+.testimonial .avatar {
+	margin-right: 0.5em;
+	width: 2.857142857142857em;
+}
+
+.avatar img {
+	width: 100%;
+}
+
+.testimonial cite {
+	display: inline-block;
+	margin-top: 1em;
+}
+
+.testimonial .name, .testimonial .title {
+	font-size: 0.83333em;
+}
+.person .name {
+	font-weight: bold;
+}
+.person .name, .person .title {
+	padding-left: 0.5em;
+	text-align: left;
+}
+.person .title {
+	display:none;
+}
+
+/*.testimonial{
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+*/
+@element[.testimonial] screen and (min-width: 8em ){
+	.testimonial{
+		font-size:1em;
+	}
+	.testimonial .avatar {
+		width: 3.5em;
+	}
+}
+
+@element[.testimonial] screen and (min-width: 15em ){
+	.testimonial .person .title {
+		display:block;
+	}
+}
+
+#full{
+	padding-bottom: 10em;
+	overflow: hidden;
+}
+
+.pos-a, .pos-b{
+	float:left;
+	box-sizing:border-box;
+	width:48%;
+}
+
+.pos-b{
+	margin-left:4%;
+}
