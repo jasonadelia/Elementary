@@ -35,7 +35,7 @@ It is very possible that there are multiple elements on the page that match the 
 
 <pre>
     ... html file ...
-    <div class="testimonial">...</div>
+    `<div class="testimonial"`>...`</div`>
 
     ... css file ...
     @element[.testimonial] screen and (min-width: 8em ){
